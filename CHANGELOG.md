@@ -1,5 +1,25 @@
 # Xonsh Change Log
 
+## [0.25.0](https://github.com/xonsh/xonsh/compare/0.24.2...0.25.0) (2026-10-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **parser:** `${'B'}` with a list value now yields a single argument, like `$B`. Since 0.17.0 it was expanded into several arguments as a side effect of #5377; use `@($B)` to expand a list.
+
+### Fixes
+
+* **completer:** don't read a quoted first token as a command name ([#6602](https://github.com/xonsh/xonsh/issues/6602)) ([e7d19ab](https://github.com/xonsh/xonsh/commit/e7d19abc4f9c0ab505aa36c6d413cf5960dd0921))
+* **history:** never let JSON history flushing block shell exit  ([#6596](https://github.com/xonsh/xonsh/issues/6596)) ([13bd0f2](https://github.com/xonsh/xonsh/commit/13bd0f229b8294aa98cdc34442f1fd8e71124740))
+* **parser:** make `${expr}` subprocess args strings like `$NAME` ([#6612](https://github.com/xonsh/xonsh/issues/6612)) ([05fddb0](https://github.com/xonsh/xonsh/commit/05fddb0ca568ddbe17d7a3a6fb6f78ae04bfd4b9))
+* **ptk:** handle Shift+Space and Shift+Backspace modifyOtherKeys reports ([#6599](https://github.com/xonsh/xonsh/issues/6599)) ([dd8571f](https://github.com/xonsh/xonsh/commit/dd8571ff04963c920d4e92d4da3a2ee07ece5567))
+* **shell:** do not write the terminal title escape when stdout is not a tty ([#6604](https://github.com/xonsh/xonsh/issues/6604)) ([e2b76f7](https://github.com/xonsh/xonsh/commit/e2b76f7fa54d2272c0b5a84b77a816fe882bee48))
+
+
+### Documentation
+
+* Fix execution shortcuts ([#6590](https://github.com/xonsh/xonsh/issues/6590)) ([7ac936f](https://github.com/xonsh/xonsh/commit/7ac936f745bee53a315c03c8b895bd0e1a856318))
+
 ## [0.24.2](https://github.com/xonsh/xonsh/compare/0.24.1...0.24.2) (2026-08-23)
 
 
